@@ -24,3 +24,19 @@
 
 ### Sniper
 - [sniper_meta.txt](https://github.com/AlexVoyt/Scans/blob/master/metasploitable/sniper/sniper_meta.txt)
+
+### Nexpose
+![nexpose_mem](https://github.com/AlexVoyt/Scans/blob/master/metasploitable/nexpose/memory.png)
+![nexpose_storage](https://github.com/AlexVoyt/Scans/blob/master/metasploitable/nexpose/storage.png)
+
+## HTB(Meta)
+
+### Nmap
+- [nmap_addrinfo.txt](https://github.com/AlexVoyt/Scans/blob/master/htb/nmap/nmap_addrinfo.txt)
+- [nmap_defaccount.txt](https://github.com/AlexVoyt/Scans/blob/master/htb/nmap/nmap_defaccount.txt)
+- [nmap_filechecker.txt](https://github.com/AlexVoyt/Scans/blob/master/htb/nmap/nmap_filechecker.txt)
+- [nmap_vulnscan.txt](https://github.com/AlexVoyt/Scans/blob/master/htb/nmap/nmap_vulnscan.txt)
+
+### Sniper
+- [sniper_meta.txt](https://github.com/AlexVoyt/Scans/blob/master/htb/sniper/htb_sniper.txt)
+

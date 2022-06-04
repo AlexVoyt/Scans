@@ -1,0 +1,1088 @@
+Starting PostgreSQL 13 database server: main.
+[94m[*][0m Loaded configuration file from /usr/share/sniper/sniper.conf [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Loaded configuration file from /root/.sniper.conf [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Saving loot to /usr/share/sniper/loot/ [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Scanning 10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+Starting PostgreSQL 13 database server: main.
+[94m[*][0m Loaded configuration file from /usr/share/sniper/sniper.conf [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Loaded configuration file from /root/.sniper.conf [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Saving loot to /usr/share/sniper/loot/workspace/10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Scanning 10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+[91m                ____               [0m
+[91m    _________  /  _/___  ___  _____[0m
+[91m   / ___/ __ \ / // __ \/ _ \/ ___/[0m
+[91m  (__  ) / / // // /_/ /  __/ /    [0m
+[91m /____/_/ /_/___/ .___/\___/_/     [0m
+[91m               /_/                 [0m
+[0m
+[93m + -- --=[https://sn1persecurity.com
+[93m + -- --=[Sn1per v9.0 by @xer0dayz
+[0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m GATHERING DNS INFO [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m CHECKING FOR SUBDOMAIN HIJACKING [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m PINGING HOST [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+PING 10.10.11.140 (10.10.11.140) 56(84) bytes of data.
+64 bytes from 10.10.11.140: icmp_seq=1 ttl=62 time=227 ms
+
+--- 10.10.11.140 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 226.755/226.755/226.755/0.000 ms
+
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m RUNNING TCP PORT SCAN [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-04 01:06 UTC
+Nmap scan report for 10.10.11.140
+Host is up (0.23s latency).
+Not shown: 61 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 2.38 seconds
+
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m RUNNING INTRUSIVE SCANS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m + -- --=[Port 21 closed... skipping.[0m
+[93m + -- --=[Port 22 opened... running tests...[0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m RUNNING SSH AUDIT [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[0;36m# general[0m
+[0;32m(gen) banner: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2[0m
+[0;32m(gen) software: OpenSSH 7.9p1[0m
+[0;32m(gen) compatibility: OpenSSH 7.3+, Dropbear SSH 2016.73+[0m
+[0;32m(gen) compression: enabled (zlib@openssh.com)[0m
+
+[0;36m# key exchange algorithms[0m
+[0;33m(kex) curve25519-sha256                     -- [warn] unknown algorithm[0m
+[0;32m(kex) curve25519-sha256@libssh.org          -- [info] available since OpenSSH 6.5, Dropbear SSH 2013.62[0m
+[0;31m(kex) ecdh-sha2-nistp256                    -- [fail] using weak elliptic curves[0m
+                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+[0;31m(kex) ecdh-sha2-nistp384                    -- [fail] using weak elliptic curves[0m
+                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+[0;31m(kex) ecdh-sha2-nistp521                    -- [fail] using weak elliptic curves[0m
+                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+[0;33m(kex) diffie-hellman-group-exchange-sha256  -- [warn] using custom size modulus (possibly weak)[0m
+                                            `- [info] available since OpenSSH 4.4
+[0;32m(kex) diffie-hellman-group16-sha512         -- [info] available since OpenSSH 7.3, Dropbear SSH 2016.73[0m
+[0;32m(kex) diffie-hellman-group18-sha512         -- [info] available since OpenSSH 7.3[0m
+[0;32m(kex) diffie-hellman-group14-sha256         -- [info] available since OpenSSH 7.3, Dropbear SSH 2016.73[0m
+[0;33m(kex) diffie-hellman-group14-sha1           -- [warn] using weak hashing algorithm[0m
+                                            `- [info] available since OpenSSH 3.9, Dropbear SSH 0.53
+
+[0;36m# host-key algorithms[0m
+[0;32m(key) rsa-sha2-512                          -- [info] available since OpenSSH 7.2[0m
+[0;32m(key) rsa-sha2-256                          -- [info] available since OpenSSH 7.2[0m
+[0;32m(key) ssh-rsa                               -- [info] available since OpenSSH 2.5.0, Dropbear SSH 0.28[0m
+[0;31m(key) ecdsa-sha2-nistp256                   -- [fail] using weak elliptic curves[0m
+[0;33m                                            `- [warn] using weak random number generator could reveal the key[0m
+                                            `- [info] available since OpenSSH 5.7, Dropbear SSH 2013.62
+[0;32m(key) ssh-ed25519                           -- [info] available since OpenSSH 6.5[0m
+
+[0;36m# encryption algorithms (ciphers)[0m
+[0;32m(enc) chacha20-poly1305@openssh.com         -- [info] available since OpenSSH 6.5[0m
+                                            `- [info] default cipher since OpenSSH 6.9.
+[0;32m(enc) aes128-ctr                            -- [info] available since OpenSSH 3.7, Dropbear SSH 0.52[0m
+[0;32m(enc) aes192-ctr                            -- [info] available since OpenSSH 3.7[0m
+[0;32m(enc) aes256-ctr                            -- [info] available since OpenSSH 3.7, Dropbear SSH 0.52[0m
+[0;32m(enc) aes128-gcm@openssh.com                -- [info] available since OpenSSH 6.2[0m
+[0;32m(enc) aes256-gcm@openssh.com                -- [info] available since OpenSSH 6.2[0m
+
+[0;36m# message authentication code algorithms[0m
+[0;33m(mac) umac-64-etm@openssh.com               -- [warn] using small 64-bit tag size[0m
+                                            `- [info] available since OpenSSH 6.2
+[0;32m(mac) umac-128-etm@openssh.com              -- [info] available since OpenSSH 6.2[0m
+[0;32m(mac) hmac-sha2-256-etm@openssh.com         -- [info] available since OpenSSH 6.2[0m
+[0;32m(mac) hmac-sha2-512-etm@openssh.com         -- [info] available since OpenSSH 6.2[0m
+[0;33m(mac) hmac-sha1-etm@openssh.com             -- [warn] using weak hashing algorithm[0m
+                                            `- [info] available since OpenSSH 6.2
+[0;33m(mac) umac-64@openssh.com                   -- [warn] using encrypt-and-MAC mode[0m
+[0;33m                                            `- [warn] using small 64-bit tag size[0m
+                                            `- [info] available since OpenSSH 4.7
+[0;33m(mac) umac-128@openssh.com                  -- [warn] using encrypt-and-MAC mode[0m
+                                            `- [info] available since OpenSSH 6.2
+[0;33m(mac) hmac-sha2-256                         -- [warn] using encrypt-and-MAC mode[0m
+                                            `- [info] available since OpenSSH 5.9, Dropbear SSH 2013.56
+[0;33m(mac) hmac-sha2-512                         -- [warn] using encrypt-and-MAC mode[0m
+                                            `- [info] available since OpenSSH 5.9, Dropbear SSH 2013.56
+[0;33m(mac) hmac-sha1                             -- [warn] using encrypt-and-MAC mode[0m
+[0;33m                                            `- [warn] using weak hashing algorithm[0m
+                                            `- [info] available since OpenSSH 2.1.0, Dropbear SSH 0.28
+
+[0;36m# algorithm recommendations (for OpenSSH 7.9)[0m
+[0;31m(rec) -ecdh-sha2-nistp521                   -- kex algorithm to remove [0m
+[0;31m(rec) -ecdh-sha2-nistp384                   -- kex algorithm to remove [0m
+[0;33m(rec) -diffie-hellman-group14-sha1          -- kex algorithm to remove [0m
+[0;31m(rec) -ecdh-sha2-nistp256                   -- kex algorithm to remove [0m
+[0;33m(rec) -diffie-hellman-group-exchange-sha256 -- kex algorithm to remove [0m
+[0;31m(rec) -ecdsa-sha2-nistp256                  -- key algorithm to remove [0m
+[0;33m(rec) -hmac-sha2-512                        -- mac algorithm to remove [0m
+[0;33m(rec) -umac-128@openssh.com                 -- mac algorithm to remove [0m
+[0;33m(rec) -hmac-sha2-256                        -- mac algorithm to remove [0m
+[0;33m(rec) -umac-64@openssh.com                  -- mac algorithm to remove [0m
+[0;33m(rec) -hmac-sha1                            -- mac algorithm to remove [0m
+[0;33m(rec) -hmac-sha1-etm@openssh.com            -- mac algorithm to remove [0m
+[0;33m(rec) -umac-64-etm@openssh.com              -- mac algorithm to remove [0m
+
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m RUNNING NMAP SCRIPTS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-04 01:06 UTC
+NSE: Loaded 51 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 01:06
+Completed NSE at 01:06, 0.00s elapsed
+Initiating NSE at 01:06
+Completed NSE at 01:06, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 01:06
+Completed Parallel DNS resolution of 1 host. at 01:06, 0.14s elapsed
+Initiating SYN Stealth Scan at 01:06
+Scanning 10.10.11.140 [1 port]
+Discovered open port 22/tcp on 10.10.11.140
+Completed SYN Stealth Scan at 01:06, 0.27s elapsed (1 total ports)
+Initiating Service scan at 01:06
+Scanning 1 service on 10.10.11.140
+Completed Service scan at 01:06, 0.47s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 10.10.11.140
+Retrying OS detection (try #2) against 10.10.11.140
+Initiating Traceroute at 01:06
+Completed Traceroute at 01:06, 0.23s elapsed
+Initiating Parallel DNS resolution of 3 hosts. at 01:06
+Completed Parallel DNS resolution of 3 hosts. at 01:06, 0.14s elapsed
+NSE: Script scanning 10.10.11.140.
+Initiating NSE at 01:06
+NSE: [ssh-run 10.10.11.140:22] Failed to specify credentials and command to run.
+Completed NSE at 01:06, 6.55s elapsed
+Initiating NSE at 01:06
+Completed NSE at 01:06, 0.00s elapsed
+Nmap scan report for 10.10.11.140
+Host is up (0.22s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|_    publickey
+|_ssh-brute: Password authentication not allowed
+| ssh-hostkey: 
+|   2048 12:81:17:5a:5a:c9:c6:00:db:f0:ed:93:64:fd:1e:08 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiNHVBq9XNN5eXFkQosElagVm6qkXg6Iryueb1zAywZIA4b0dX+5xR5FpAxvYPxmthXA0E7/wunblfjPekyeKg+lvb+rEiyUJH25W/In13zRfJ6Su/kgxw9whZ1YUlzFTWDjUjQBij7QSMktOcQLi7zgrkG3cxGcS39SrEM8tvxcuSzMwzhFqVKFP/AM0jAxJ5HQVrkXkpGR07rgLyd+cNQKOGnFpAukUJnjdfv9PsV+LQs9p+a0jID+5B9y5fP4w9PvYZUkRGHcKCefYk/2UUVn0HesLNNrfo6iUxu+eeM9EGUtqQZ8nXI54nHOvzbc4aFbxADCfew/UJzQT7rovB
+|   256 b5:e5:59:53:00:18:96:a6:f8:42:d8:c7:fb:13:20:49 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEDINAHjreE4lgZywOGusB8uOKvVDmVkgznoDmUI7Rrnlmpy6DnOUhov0HfQVG6U6B4AxCGaGkKTbS0tFE8hYis=
+|   256 05:e9:df:71:b5:9f:25:03:6b:d0:46:8d:05:45:44:20 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINdX83J9TLR63TPxQSvi3CuobX8uyKodvj26kl9jWUSq
+| ssh-publickey-acceptance: 
+|_  Accepted Public Keys: No public keys accepted
+|_ssh-run: Failed to specify credentials and command to run.
+| vulners: 
+|   cpe:/a:openbsd:openssh:7.9p1: 
+|     	MSF:ILITIES/UBUNTU-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2019-25017/	5.8	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-25017/	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/IBM-AIX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/DEBIAN-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	EXPLOITPACK:98FE96309F9524B8C84C508837551A19	5.8	https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19	*EXPLOIT*
+|     	EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	5.8	https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	*EXPLOIT*
+|     	EDB-ID:46516	5.8	https://vulners.com/exploitdb/EDB-ID:46516	*EXPLOIT*
+|     	EDB-ID:46193	5.8	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
+|     	CVE-2019-6111	5.8	https://vulners.com/cve/CVE-2019-6111
+|     	1337DAY-ID-32328	5.8	https://vulners.com/zdt/1337DAY-ID-32328	*EXPLOIT*
+|     	1337DAY-ID-32009	5.8	https://vulners.com/zdt/1337DAY-ID-32009	*EXPLOIT*
+|     	CVE-2021-41617	4.4	https://vulners.com/cve/CVE-2021-41617
+|     	CVE-2019-16905	4.4	https://vulners.com/cve/CVE-2019-16905
+|     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
+|     	CVE-2020-14145	4.3	https://vulners.com/cve/CVE-2020-14145
+|     	CVE-2019-6110	4.0	https://vulners.com/cve/CVE-2019-6110
+|     	CVE-2019-6109	4.0	https://vulners.com/cve/CVE-2019-6109
+|     	CVE-2018-20685	2.6	https://vulners.com/cve/CVE-2018-20685
+|_    	PACKETSTORM:151227	0.0	https://vulners.com/packetstorm/PACKETSTORM:151227	*EXPLOIT*
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 4.15 - 5.6 (95%), Linux 5.3 - 5.4 (95%), Linux 2.6.32 (95%), Linux 5.0 (94%), Linux 5.0 - 5.3 (94%), Linux 5.4 (94%), Linux 5.0 - 5.4 (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 28.754 days (since Fri May  6 07:00:29 2022)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   0.09 ms   172.17.0.1
+2   228.19 ms 10.10.14.1
+3   227.91 ms 10.10.11.140
+
+NSE: Script Post-scanning.
+Initiating NSE at 01:06
+Completed NSE at 01:06, 0.00s elapsed
+Initiating NSE at 01:06
+Completed NSE at 01:06, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.74 seconds
+           Raw packets sent: 62 (4.444KB) | Rcvd: 33 (2.792KB)
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[91m RUNNING SSH VERSION SCANNER [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:06)[0mx•
+[0mUSER_FILE => /usr/share/brutex/wordlists/simple-users.txt
+[0mRHOSTS => 10.10.11.140
+[0mRHOST => 10.10.11.140
+[0m[0m[1m[32m[+][0m 10.10.11.140:22       - SSH server version: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2 ( service.version=7.9p1 openssh.comment=Debian-10+deb10u2 service.vendor=OpenBSD service.family=OpenSSH service.product=OpenSSH service.cpe23=cpe:/a:openbsd:openssh:7.9p1 os.vendor=Debian os.family=Linux os.product=Linux os.version=10.2 os.cpe23=cpe:/o:debian:debian_linux:10.2 service.protocol=ssh fingerprint_db=ssh.banner )
+[1m[34m[*][0m 10.10.11.140:22       - Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[0m[92m====================================================================================[0m•x[92m[2022-06-04](01:07)[0mx•
+[91m RUNNING OPENSSH USER ENUM SCANNER [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:07)[0mx•
+[0mUSER_FILE => /usr/share/brutex/wordlists/simple-users.txt
+[0mRHOSTS => 10.10.11.140
+[0mRHOST => 10.10.11.140
+[0m[0m[1m[34m[*][0m 10.10.11.140:22 - SSH - Using malformed packet technique
+[1m[34m[*][0m 10.10.11.140:22 - SSH - Starting scan
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'admin' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'administrator' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'anonymous' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'backup' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'bee' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'ftp' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'guest' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'GUEST' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'info' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'mail' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'mailadmin' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'msfadmin' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'mysql' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'nobody' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'oracle' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'owaspbwa' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'postfix' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'postgres' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'private' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'proftpd' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'public' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'pi' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'kali' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'root' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'superadmin' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'support' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'sys' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'system' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'systemadmin' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'systemadministrator' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'test' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'tomcat' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'user' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'webmaster' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'www-data' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'Fortimanager_Access' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'zyfwp' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'osmc' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'rokos' found
+[1m[32m[+][0m 10.10.11.140:22 - SSH - User 'ubuntu' found
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[0m[92m====================================================================================[0m•x[92m[2022-06-04](01:08)[0mx•
+[91m RUNNING LIBSSH AUTH BYPASS EXPLOIT CVE-2018-10933 [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:08)[0mx•
+[0mRHOSTS => 10.10.11.140
+[0mRHOST => 10.10.11.140
+[0mLHOST => 127.0.0.1
+[0mLPORT => 4444
+[0m[0m[1m[34m[*][0m 10.10.11.140:22 - Attempting authentication bypass
+[1m[34m[*][0m Scanned 1 of 1 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[0m[91m + -- --=[Port 23 closed... skipping.[0m
+[91m + -- --=[Port 25 closed... skipping.[0m
+[91m + -- --=[Port 53 closed... skipping.[0m
+[91m + -- --=[Port 67 closed... skipping.[0m
+[91m + -- --=[Port 68 closed... skipping.[0m
+[91m + -- --=[Port 69 closed... skipping.[0m
+[91m + -- --=[Port 79 closed... skipping.[0m
+[91m + -- --=[Port 110 closed... skipping.[0m
+[91m + -- --=[Port 111 closed... skipping.[0m
+[91m + -- --=[Port 123 closed... skipping.[0m
+[91m + -- --=[Port 135 closed... skipping.[0m
+[91m + -- --=[Port 137 closed... skipping.[0m
+[91m + -- --=[Port 139 closed... skipping.[0m
+[91m + -- --=[Port 161 closed... skipping.[0m
+[91m + -- --=[Port 162 closed... skipping.[0m
+[91m + -- --=[Port 264 closed... skipping.[0m
+[91m + -- --=[Port 389 closed... skipping.[0m
+[91m + -- --=[Port 445 closed... skipping.[0m
+[91m + -- --=[Port 500 closed... skipping.[0m
+[91m + -- --=[Port 512 closed... skipping.[0m
+[91m + -- --=[Port 513 closed... skipping.[0m
+[91m + -- --=[Port 514 closed... skipping.[0m
+[91m + -- --=[Port 1099 closed... skipping.[0m
+[91m + -- --=[Port 1433 closed... skipping.[0m
+[91m + -- --=[Port 2049 closed... skipping.[0m
+[91m + -- --=[Port 2181 closed... skipping.[0m
+[91m + -- --=[Port 3306 closed... skipping.[0m
+[91m + -- --=[Port 3310 closed... skipping.[0m
+[91m + -- --=[Port 3128 closed... skipping.[0m
+[91m + -- --=[Port 3389 closed... skipping.[0m
+[91m + -- --=[Port 3632 closed... skipping.[0m
+[91m + -- --=[Port 5432 closed... skipping.[0m
+[91m + -- --=[Port 5555 closed... skipping.[0m
+[91m + -- --=[Port 5800 closed... skipping.[0m
+[91m + -- --=[Port 5900 closed... skipping.[0m
+[91m + -- --=[Port 5984 closed... skipping.[0m
+[91m + -- --=[Port 6000 closed... skipping.[0m
+[91m + -- --=[Port 6667 closed... skipping.[0m
+[91m + -- --=[Port 7001 closed... skipping.[0m
+[91m + -- --=[Port 8000 closed... skipping.[0m
+[91m + -- --=[Port 8001 closed... skipping.[0m
+[91m + -- --=[Port 9495 closed... skipping.[0m
+[91m + -- --=[Port 10000 closed... skipping.[0m
+[91m + -- --=[Port 16992 closed... skipping.[0m
+[91m + -- --=[Port 27017 closed... skipping.[0m
+[91m + -- --=[Port 27018 closed... skipping.[0m
+[91m + -- --=[Port 27019 closed... skipping.[0m
+[91m + -- --=[Port 28017 closed... skipping.[0m
+[91m + -- --=[Port 49180 closed... skipping.[0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m SCANNING ALL HTTP PORTS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+Starting PostgreSQL 13 database server: main.
+[94m[*][0m Loaded configuration file from /usr/share/sniper/sniper.conf [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Loaded configuration file from /root/.sniper.conf [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Saving loot to /usr/share/sniper/loot/workspace/10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Scanning 10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Saving loot to /usr/share/sniper/loot/workspace/10.10.11.140 [[0m[92mOK[0m[94m][0m
+Starting PostgreSQL 13 database server: main.
+[94m[*][0m Loaded configuration file from /usr/share/sniper/sniper.conf [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Loaded configuration file from /root/.sniper.conf [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Saving loot to /usr/share/sniper/loot/workspace/10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+[94m[*][0m Scanning 10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+[91m                ____               [0m
+[91m    _________  /  _/___  ___  _____[0m
+[91m   / ___/ __ \ / // __ \/ _ \/ ___/[0m
+[91m  (__  ) / / // // /_/ /  __/ /    [0m
+[91m /____/_/ /_/___/ .___/\___/_/     [0m
+[91m               /_/                 [0m
+[0m
+[93m + -- --=[https://sn1persecurity.com
+[93m + -- --=[Sn1per v9.0 by @xer0dayz
+
+
+               ;               ,           
+             ,;                 '.         
+            ;:                   :;        
+           ::                     ::       
+           ::                     ::       
+           ':                     :        
+            :.                    :        
+         ;' ::                   ::  '     
+        .'  ';                   ;'  '.    
+       ::    :;                 ;:    ::   
+       ;      :;.             ,;:     ::   
+       :;      :;:           ,;"      ::   
+       ::.      ':;  ..,.;  ;:'     ,.;:   
+        "'"...   '::,::::: ;:   .;.;""'    
+            '"""....;:::::;,;.;"""         
+        .:::.....'"':::::::'",...;::::;.   
+       ;:' '""'"";.,;:::::;.'""""""  ':;   
+      ::'         ;::;:::;::..         :;  
+     ::         ,;:::::::::::;:..       :: 
+     ;'     ,;;:;::::::::::::::;";..    ':.
+    ::     ;:"  ::::::"""'::::::  ":     ::
+     :.    ::   ::::::;  :::::::   :     ; 
+      ;    ::   :::::::  :::::::   :    ;  
+       '   ::   ::::::....:::::'  ,:   '   
+        '  ::    :::::::::::::"   ::       
+           ::     ':::::::::"'    ::       
+           ':       """""""'      ::       
+            ::                   ;:        
+            ':;                 ;:"        
+    -hrr-     ';              ,;'          
+                "'           '"            
+                  ''''[0m
+
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m RUNNING TCP PORT SCAN [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[93m + -- --=[Port 80 opened... running tests...[0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m CHECKING HTTP HEADERS AND METHODS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+HTTP/1.1 301 Moved Permanently
+Date: Sat, 04 Jun 2022 01:07:14 GMT
+Server: Apache
+Location: http://artcorp.htb
+Content-Type: text/html; charset=UTF-8
+
+HTTP/1.1 301 Moved Permanently
+Date: Sat, 04 Jun 2022 01:07:15 GMT
+Server: Apache
+Location: http://artcorp.htb
+Content-Type: text/html; charset=UTF-8
+
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m DISPLAYING META GENERATOR TAGS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m DISPLAYING COMMENTS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m DISPLAYING SITE LINKS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m CHECKING FOR WAF [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+
+                [1;97m______
+               [1;97m/      \
+              [1;97m(  W00f! )
+               [1;97m\  ____/
+               [1;97m,,    [1;92m__            [1;93m404 Hack Not Found
+           [1;96m|`-.__   [1;92m/ /                     [1;91m __     __
+           [1;96m/"  _/  [1;92m/_/                       [1;91m\ \   / /
+          [1;94m*===*    [1;92m/                          [1;91m\ \_/ /  [1;93m405 Not Allowed
+         [1;96m/     )__//                           [1;91m\   /
+    [1;96m/|  /     /---`                        [1;93m403 Forbidden
+    [1;96m\\/`   \ |                                 [1;91m/ _ \
+    [1;96m`\    /_\\_              [1;93m502 Bad Gateway  [1;91m/ / \ \  [1;93m500 Internal Error
+      [1;96m`_____``-`                             [1;91m/_/   \_\
+
+                        [1;96m~ WAFW00F : [1;94mv2.1.0 ~[1;97m
+        The Web Application Firewall Fingerprinting Toolkit
+    [0m
+[*] Checking http://10.10.11.140
+
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m GATHERING HTTP INFO [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[1m[34mhttp://10.10.11.140:80[0m [301 Moved Permanently] [1mApache[0m, [1mCountry[0m[[0m[22mRESERVED[0m][[1m[31mZZ[0m], [1mHTTPServer[0m[[1m[36mApache[0m], [1mIP[0m[[0m[22m10.10.11.140[0m], [1mRedirectLocation[0m[[0m[22mhttp://artcorp.htb[0m]
+
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m GATHERING WEB FINGERPRINT [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m SAVING SCREENSHOTS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+webscreenshot.py version 2.2.1
+
+[+] 1 URLs to be screenshot
+[+] 1 actual URLs screenshot
+[+] 0 error(s)
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+[91m RUNNING NMAP SCRIPTS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:09)[0mx•
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-04 01:09 UTC
+NSE: Loaded 50 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 01:10
+Completed NSE at 01:10, 0.00s elapsed
+Initiating NSE at 01:10
+Completed NSE at 01:10, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 01:10
+Completed Parallel DNS resolution of 1 host. at 01:10, 0.14s elapsed
+Initiating SYN Stealth Scan at 01:10
+Scanning 10.10.11.140 [1 port]
+Discovered open port 80/tcp on 10.10.11.140
+Completed SYN Stealth Scan at 01:10, 0.28s elapsed (1 total ports)
+Initiating Service scan at 01:10
+Scanning 1 service on 10.10.11.140
+Completed Service scan at 01:10, 6.47s elapsed (1 service on 1 host)
+NSE: Script scanning 10.10.11.140.
+Initiating NSE at 01:10
+Completed NSE at 01:10, 1.36s elapsed
+Initiating NSE at 01:10
+Completed NSE at 01:10, 0.90s elapsed
+Nmap scan report for 10.10.11.140
+Host is up (0.23s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd
+| http-brute:   
+|_  Path "/" does not require authentication
+|_http-server-header: Apache
+
+NSE: Script Post-scanning.
+Initiating NSE at 01:10
+Completed NSE at 01:10, 0.00s elapsed
+Initiating NSE at 01:10
+Completed NSE at 01:10, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 10.85 seconds
+           Raw packets sent: 1 (44B) | Rcvd: 1 (44B)
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING PASSIVE WEB SPIDER [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m FETCHING WAYBACK MACHINE URLS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m FETCHING HACKERTARGET URLS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m FETCHING GUA URLS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING ACTIVE WEB SPIDER & APPLICATION SCAN [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m
+[91m
+[91m                _.._
+[91m              .'    '.
+[91m             /   __   \ 
+[91m          ,  |   ><   |  ,
+[91m         . \  \      /  / .
+[91m          \_'--`(  )'--'_/
+[91m            .--'/()'--.
+[91m@xer0dayz  /  /` '' `\  \ 
+[91m             |        |
+[91m              \      /
+[91m
+[0m
+[93m + -- --=[ https://sn1persecurity.com[0m
+[93m + -- --=[ blackwidow v1.3 by @xer0dayz [0m
+[0m
+HTTPConnectionPool(host='artcorp.htb', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f8f339430>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+local variable 'domain' referenced before assignment
+[91m
+[91m
+[91m                _.._
+[91m              .'    '.
+[91m             /   __   \ 
+[91m          ,  |   ><   |  ,
+[91m         . \  \      /  / .
+[91m          \_'--`(  )'--'_/
+[91m            .--'/()'--.
+[91m@xer0dayz  /  /` '' `\  \ 
+[91m             |        |
+[91m              \      /
+[91m
+[0m
+[93m + -- --=[ https://sn1persecurity.com[0m
+[93m + -- --=[ blackwidow v1.3 by @xer0dayz [0m
+[0m
+[92m[+] URL's Discovered: 
+/usr/share/blackwidow/10.10.11.140_80/10.10.11.140_80-urls-sorted.txt[0m
+[92m__________________________________________________________________________________________________[0m
+[0m
+[92m[+] Dynamic URL's Discovered: 
+/usr/share/blackwidow/10.10.11.140_80/10.10.11.140_80-dynamic-sorted.txt[0m
+[92m__________________________________________________________________________________________________[0m
+[0m
+[92m[+] Form URL's Discovered: 
+/usr/share/blackwidow/10.10.11.140_80/10.10.11.140_80-forms-sorted.txt[0m
+[92m__________________________________________________________________________________________________[0m
+[0m
+[92m[+] Unique Dynamic Parameters Discovered: 
+/usr/share/blackwidow/10.10.11.140_80/10.10.11.140_80-dynamic-unique.txt[0m
+[92m__________________________________________________________________________________________________[0m
+[0m
+[92m[+] Sub-domains Discovered: 
+/usr/share/blackwidow/10.10.11.140_80/10.10.11.140_80-subdomains-sorted.txt[0m
+[92m__________________________________________________________________________________________________[0m
+[0m
+[92m[+] Emails Discovered: 
+/usr/share/blackwidow/10.10.11.140_80/10.10.11.140_80-emails-sorted.txt[0m
+[92m__________________________________________________________________________________________________[0m
+[0m
+[92m[+] Phones Discovered: 
+/usr/share/blackwidow/10.10.11.140_80/10.10.11.140_80-phones-sorted.txt[0m
+[92m__________________________________________________________________________________________________[0m
+[0m
+[91m[+] Loot Saved To: 
+/usr/share/blackwidow/10.10.11.140_80/[0m
+[91m__________________________________________________________________________________________________[0m
+[0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING INTERESTING EXTENSIONS STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING INTERESTING PARAMETERS STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING XSS STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING SSRF STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING REDIRECT STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING RCE STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING IDOR STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING SQL STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING LFI STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING SSTI STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING DEBUG STATIC ANALYSIS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m DOWNLOADING ALL JAVASCRIPT FILES [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m DISPLAYING ALL JAVASCRIPT COMMENTS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m DISPLAYING ALL JAVASCRIPT LINKS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING LINKFINDER [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m DISPLAYING PATH RELATIVE LINKS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m DISPLAYING JAVASCRIPT URLS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m DISPLAYING JAVASCRIPT DOMAINS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING COMMON FILE/DIRECTORY BRUTE FORCE [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[35m[1m
+  _|. _ _  _  _  _ _|_    v0.4.2
+ (_||| _) (/_(_|| (_| )
+[0m
+[33m[1mExtensions: [0m[36m[1mhtm, html, asp, aspx, php, jsp, js[0m[35m[1m | [0m[33m[1mHTTP method: [0m[36m[1mGET[0m[35m[1m | [0m[33m[1mThreads: [0m[36m[1m100[0m[35m[1m | [0m[33m[1mWordlist size: [0m[36m[1m9696[0m
+
+Output File: /usr/share/sniper/loot/workspace/10.10.11.140/web/dirsearch-10.10.11.140.txt
+
+Error Log: /usr/share/sniper/plugins/dirsearch/logs/errors-22-06-04_01-10-18.log
+
+[33m[1mTarget: [0m[36m[1mhttp://10.10.11.140:80/[0m
+
+[41m[37m[1mCannot connect to: 10.10.11.140:80[0m
+[33m[1m
+Task Completed[0m
+[0m[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+[91m RUNNING HTTP REQUEST SMUGGLING DETECTION [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:10)[0mx•
+
+  ______                         _              
+ / _____)                       | |             
+( (____  ____  _   _  ____  ____| | _____  ____ 
+ \____ \|    \| | | |/ _  |/ _  | || ___ |/ ___)
+ _____) ) | | | |_| ( (_| ( (_| | || ____| |    
+(______/|_|_|_|____/ \___ |\___ |\_)_____)_|    
+                    (_____(_____|               
+
+     @defparam                         v1.1
+
+[+] URL        : http://10.10.11.140:80
+[+] Method     : POST
+[+] Endpoint   : 
+[+] Configfile : default.py
+[+] Timeout    : 5.0 seconds
+[+] Cookies    : 0 (Appending to the attack)
+                                                                                                    [nameprefix1]  : Checking TECL...                                                                                                    [nameprefix1]  : Checking CLTE...                                                                                                    [nameprefix1]  : OK (TECL: 0.46 - 400) (CLTE: 0.48 - 400)
+                                                                                                    [tabprefix1]   : Checking TECL...                                                                                                    [tabprefix1]   : Checking CLTE...                                                                                                    [tabprefix1]   : TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [tabprefix2]   : Checking TECL...                                                                                                    [tabprefix2]   : Checking CLTE...                                                                                                    [tabprefix2]   : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [space1]       : Checking TECL...                                                                                                    [space1]       : Checking CLTE...                                                                                                    [space1]       : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-01]  : Checking TECL...                                                                                                    [midspace-01]  : Checking CLTE...                                                                                                    [midspace-01]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-01] : Checking TECL...                                                                                                    [postspace-01] : Checking CLTE...                                                                                                    [postspace-01] : OK (TECL: 0.47 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [prespace-01]  : Checking TECL...                                                                                                    [prespace-01]  : Checking CLTE...                                                                                                    [prespace-01]  : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-01]  : Checking TECL...                                                                                                    [endspace-01]  : Checking CLTE...                                                                                                    [endspace-01]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-01] : Checking TECL...                                                                                                    [xprespace-01] : Checking CLTE...                                                                                                    [xprespace-01] : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacex-01] : Checking TECL...                                                                                                    [endspacex-01] : Checking CLTE...                                                                                                    [endspacex-01] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-01]: Checking TECL...                                                                                                    [rxprespace-01]: Checking CLTE...                                                                                                    [rxprespace-01]: OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [xnprespace-01]: Checking TECL...                                                                                                    [xnprespace-01]: Checking CLTE...                                                                                                    [xnprespace-01]: OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [endspacerx-01]: Checking TECL...                                                                                                    [endspacerx-01]: Checking CLTE...                                                                                                    [endspacerx-01]: OK (TECL: 0.47 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [endspacexn-01]: Checking TECL...                                                                                                    [endspacexn-01]: Checking CLTE...                                                                                                    [endspacexn-01]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-04]  : Checking TECL...                                                                                                    [midspace-04]  : Checking CLTE...                                                                                                    [midspace-04]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-04] : Checking TECL...                                                                                                    [postspace-04] : Checking CLTE...                                                                                                    [postspace-04] : OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [prespace-04]  : Checking TECL...                                                                                                    [prespace-04]  : Checking CLTE...                                                                                                    [prespace-04]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-04]  : Checking TECL...                                                                                                    [endspace-04]  : Checking CLTE...                                                                                                    [endspace-04]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-04] : Checking TECL...                                                                                                    [xprespace-04] : Checking CLTE...                                                                                                    [xprespace-04] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacex-04] : Checking TECL...                                                                                                    [endspacex-04] : Checking CLTE...                                                                                                    [endspacex-04] : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-04]: Checking TECL...                                                                                                    [rxprespace-04]: Checking CLTE...                                                                                                    [rxprespace-04]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xnprespace-04]: Checking TECL...                                                                                                    [xnprespace-04]: Checking CLTE...                                                                                                    [xnprespace-04]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-04]: Checking TECL...                                                                                                    [endspacerx-04]: Checking CLTE...                                                                                                    [endspacerx-04]: OK (TECL: 0.48 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacexn-04]: Checking TECL...                                                                                                    [endspacexn-04]: Checking CLTE...                                                                                                    [endspacexn-04]: OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [midspace-08]  : Checking TECL...                                                                                                    [midspace-08]  : Checking CLTE...                                                                                                    [midspace-08]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-08] : Checking TECL...                                                                                                    [postspace-08] : Checking CLTE...                                                                                                    [postspace-08] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [prespace-08]  : Checking TECL...                                                                                                    [prespace-08]  : Checking CLTE...                                                                                                    [prespace-08]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-08]  : Checking TECL...                                                                                                    [endspace-08]  : Checking CLTE...                                                                                                    [endspace-08]  : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-08] : Checking TECL...                                                                                                    [xprespace-08] : Checking CLTE...                                                                                                    [xprespace-08] : OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [endspacex-08] : Checking TECL...                                                                                                    [endspacex-08] : Checking CLTE...                                                                                                    [endspacex-08] : OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [rxprespace-08]: Checking TECL...                                                                                                    [rxprespace-08]: Checking CLTE...                                                                                                    [rxprespace-08]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xnprespace-08]: Checking TECL...                                                                                                    [xnprespace-08]: Checking CLTE...                                                                                                    [xnprespace-08]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-08]: Checking TECL...                                                                                                    [endspacerx-08]: Checking CLTE...                                                                                                    [endspacerx-08]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacexn-08]: Checking TECL...                                                                                                    [endspacexn-08]: Checking CLTE...                                                                                                    [endspacexn-08]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-09]  : Checking TECL...                                                                                                    [midspace-09]  : Checking CLTE...                                                                                                    [midspace-09]  : TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [postspace-09] : Checking TECL...                                                                                                    [postspace-09] : Checking CLTE...                                                                                                    [postspace-09] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [prespace-09]  : Checking TECL...                                                                                                    [prespace-09]  : Checking CLTE...                                                                                                    [prespace-09]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-09]  : Checking TECL...                                                                                                    [endspace-09]  : Checking CLTE...                                                                                                    [endspace-09]  : TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [xprespace-09] : Checking TECL...                                                                                                    [xprespace-09] : Checking CLTE...                                                                                                    [xprespace-09] : OK (TECL: 0.46 - 301) (CLTE: 0.46 - 301)
+                                                                                                    [endspacex-09] : Checking TECL...                                                                                                    [endspacex-09] : Checking CLTE...                                                                                                    [endspacex-09] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-09]: Checking TECL...                                                                                                    [rxprespace-09]: Checking CLTE...                                                                                                    [rxprespace-09]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xnprespace-09]: Checking TECL...                                                                                                    [xnprespace-09]: Checking CLTE...                                                                                                    [xnprespace-09]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-09]: Checking TECL...                                                                                                    [endspacerx-09]: Checking CLTE...                                                                                                    [endspacerx-09]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacexn-09]: Checking TECL...                                                                                                    [endspacexn-09]: Checking CLTE...                                                                                                    [endspacexn-09]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-0a]  : Checking TECL...                                                                                                    [midspace-0a]  : Checking CLTE...                                                                                                    [midspace-0a]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-0a] : Checking TECL...                                                                                                    [postspace-0a] : Checking CLTE...                                                                                                    [postspace-0a] : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [prespace-0a]  : Checking TECL...                                                                                                    [prespace-0a]  : Checking CLTE...                                                                                                    [prespace-0a]  : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-0a]  : Checking TECL...                                                                                                    [endspace-0a]  : Checking CLTE...                                                                                                    [endspace-0a]  : OK (TECL: 0.48 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-0a] : Checking TECL...                                                                                                    [xprespace-0a] : Checking CLTE...                                                                                                    [xprespace-0a] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacex-0a] : Checking TECL...                                                                                                    [endspacex-0a] : Checking CLTE...                                                                                                    [endspacex-0a] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-0a]: Checking TECL...                                                                                                    [rxprespace-0a]: Checking CLTE...                                                                                                    [rxprespace-0a]: TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [xnprespace-0a]: Checking TECL...                                                                                                    [xnprespace-0a]: Checking CLTE...                                                                                                    [xnprespace-0a]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-0a]: Checking TECL...                                                                                                    [endspacerx-0a]: Checking CLTE...                                                                                                    [endspacerx-0a]: TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [endspacexn-0a]: Checking TECL...                                                                                                    [endspacexn-0a]: Checking CLTE...                                                                                                    [endspacexn-0a]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-0b]  : Checking TECL...                                                                                                    [midspace-0b]  : Checking CLTE...                                                                                                    [midspace-0b]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-0b] : Checking TECL...                                                                                                    [postspace-0b] : Checking CLTE...                                                                                                    [postspace-0b] : OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [prespace-0b]  : Checking TECL...                                                                                                    [prespace-0b]  : Checking CLTE...                                                                                                    [prespace-0b]  : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-0b]  : Checking TECL...                                                                                                    [endspace-0b]  : Checking CLTE...                                                                                                    [endspace-0b]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-0b] : Checking TECL...                                                                                                    [xprespace-0b] : Checking CLTE...                                                                                                    [xprespace-0b] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacex-0b] : Checking TECL...                                                                                                    [endspacex-0b] : Checking CLTE...                                                                                                    [endspacex-0b] : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-0b]: Checking TECL...                                                                                                    [rxprespace-0b]: Checking CLTE...                                                                                                    [rxprespace-0b]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xnprespace-0b]: Checking TECL...                                                                                                    [xnprespace-0b]: Checking CLTE...                                                                                                    [xnprespace-0b]: OK (TECL: 0.48 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-0b]: Checking TECL...                                                                                                    [endspacerx-0b]: Checking CLTE...                                                                                                    [endspacerx-0b]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacexn-0b]: Checking TECL...                                                                                                    [endspacexn-0b]: Checking CLTE...                                                                                                    [endspacexn-0b]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-0c]  : Checking TECL...                                                                                                    [midspace-0c]  : Checking CLTE...                                                                                                    [midspace-0c]  : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-0c] : Checking TECL...                                                                                                    [postspace-0c] : Checking CLTE...                                                                                                    [postspace-0c] : OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [prespace-0c]  : Checking TECL...                                                                                                    [prespace-0c]  : Checking CLTE...                                                                                                    [prespace-0c]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-0c]  : Checking TECL...                                                                                                    [endspace-0c]  : Checking CLTE...                                                                                                    [endspace-0c]  : OK (TECL: 0.47 - 400) (CLTE: 0.50 - 400)
+                                                                                                    [xprespace-0c] : Checking TECL...                                                                                                    [xprespace-0c] : Checking CLTE...                                                                                                    [xprespace-0c] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacex-0c] : Checking TECL...                                                                                                    [endspacex-0c] : Checking CLTE...                                                                                                    [endspacex-0c] : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-0c]: Checking TECL...                                                                                                    [rxprespace-0c]: Checking CLTE...                                                                                                    [rxprespace-0c]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xnprespace-0c]: Checking TECL...                                                                                                    [xnprespace-0c]: Checking CLTE...                                                                                                    [xnprespace-0c]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-0c]: Checking TECL...                                                                                                    [endspacerx-0c]: Checking CLTE...                                                                                                    [endspacerx-0c]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacexn-0c]: Checking TECL...                                                                                                    [endspacexn-0c]: Checking CLTE...                                                                                                    [endspacexn-0c]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-0d]  : Checking TECL...                                                                                                    [midspace-0d]  : Checking CLTE...                                                                                                    [midspace-0d]  : OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [postspace-0d] : Checking TECL...                                                                                                    [postspace-0d] : Checking CLTE...                                                                                                    [postspace-0d] : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [prespace-0d]  : Checking TECL...                                                                                                    [prespace-0d]  : Checking CLTE...                                                                                                    [prespace-0d]  : OK (TECL: 0.46 - 400) (CLTE: 0.48 - 400)
+                                                                                                    [endspace-0d]  : Checking TECL...                                                                                                    [endspace-0d]  : Checking CLTE...                                                                                                    [endspace-0d]  : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-0d] : Checking TECL...                                                                                                    [xprespace-0d] : Checking CLTE...                                                                                                    [xprespace-0d] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacex-0d] : Checking TECL...                                                                                                    [endspacex-0d] : Checking CLTE...                                                                                                    [endspacex-0d] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-0d]: Checking TECL...                                                                                                    [rxprespace-0d]: Checking CLTE...                                                                                                    [rxprespace-0d]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xnprespace-0d]: Checking TECL...                                                                                                    [xnprespace-0d]: Checking CLTE...                                                                                                    [xnprespace-0d]: TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [endspacerx-0d]: Checking TECL...                                                                                                    [endspacerx-0d]: Checking CLTE...                                                                                                    [endspacerx-0d]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacexn-0d]: Checking TECL...                                                                                                    [endspacexn-0d]: Checking CLTE...                                                                                                    [endspacexn-0d]: TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [midspace-1f]  : Checking TECL...                                                                                                    [midspace-1f]  : Checking CLTE...                                                                                                    [midspace-1f]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-1f] : Checking TECL...                                                                                                    [postspace-1f] : Checking CLTE...                                                                                                    [postspace-1f] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [prespace-1f]  : Checking TECL...                                                                                                    [prespace-1f]  : Checking CLTE...                                                                                                    [prespace-1f]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-1f]  : Checking TECL...                                                                                                    [endspace-1f]  : Checking CLTE...                                                                                                    [endspace-1f]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-1f] : Checking TECL...                                                                                                    [xprespace-1f] : Checking CLTE...                                                                                                    [xprespace-1f] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacex-1f] : Checking TECL...                                                                                                    [endspacex-1f] : Checking CLTE...                                                                                                    [endspacex-1f] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-1f]: Checking TECL...                                                                                                    [rxprespace-1f]: Checking CLTE...                                                                                                    [rxprespace-1f]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xnprespace-1f]: Checking TECL...                                                                                                    [xnprespace-1f]: Checking CLTE...                                                                                                    [xnprespace-1f]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-1f]: Checking TECL...                                                                                                    [endspacerx-1f]: Checking CLTE...                                                                                                    [endspacerx-1f]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacexn-1f]: Checking TECL...                                                                                                    [endspacexn-1f]: Checking CLTE...                                                                                                    [endspacexn-1f]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-20]  : Checking TECL...                                                                                                    [midspace-20]  : Checking CLTE...                                                                                                    [midspace-20]  : TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [postspace-20] : Checking TECL...                                                                                                    [postspace-20] : Checking CLTE...                                                                                                    [postspace-20] : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [prespace-20]  : Checking TECL...                                                                                                    [prespace-20]  : Checking CLTE...                                                                                                    [prespace-20]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-20]  : Checking TECL...                                                                                                    [endspace-20]  : Checking CLTE...                                                                                                    [endspace-20]  : TECL TIMEOUT ON BOTH LENGTH 6 AND 5
+                                                                                                    [xprespace-20] : Checking TECL...                                                                                                    [xprespace-20] : Checking CLTE...                                                                                                    [xprespace-20] : OK (TECL: 0.46 - 301) (CLTE: 0.46 - 301)
+                                                                                                    [endspacex-20] : Checking TECL...                                                                                                    [endspacex-20] : Checking CLTE...                                                                                                    [endspacex-20] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-20]: Checking TECL...                                                                                                    [rxprespace-20]: Checking CLTE...                                                                                                    [rxprespace-20]: OK (TECL: 0.46 - 400) (CLTE: 0.57 - 400)
+                                                                                                    [xnprespace-20]: Checking TECL...                                                                                                    [xnprespace-20]: Checking CLTE...                                                                                                    [xnprespace-20]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-20]: Checking TECL...                                                                                                    [endspacerx-20]: Checking CLTE...                                                                                                    [endspacerx-20]: OK (TECL: 0.46 - 400) (CLTE: 0.52 - 400)
+                                                                                                    [endspacexn-20]: Checking TECL...                                                                                                    [endspacexn-20]: Checking CLTE...                                                                                                    [endspacexn-20]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-7f]  : Checking TECL...                                                                                                    [midspace-7f]  : Checking CLTE...                                                                                                    [midspace-7f]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-7f] : Checking TECL...                                                                                                    [postspace-7f] : Checking CLTE...                                                                                                    [postspace-7f] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [prespace-7f]  : Checking TECL...                                                                                                    [prespace-7f]  : Checking CLTE...                                                                                                    [prespace-7f]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-7f]  : Checking TECL...                                                                                                    [endspace-7f]  : Checking CLTE...                                                                                                    [endspace-7f]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-7f] : Checking TECL...                                                                                                    [xprespace-7f] : Checking CLTE...                                                                                                    [xprespace-7f] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacex-7f] : Checking TECL...                                                                                                    [endspacex-7f] : Checking CLTE...                                                                                                    [endspacex-7f] : OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-7f]: Checking TECL...                                                                                                    [rxprespace-7f]: Checking CLTE...                                                                                                    [rxprespace-7f]: OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [xnprespace-7f]: Checking TECL...                                                                                                    [xnprespace-7f]: Checking CLTE...                                                                                                    [xnprespace-7f]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-7f]: Checking TECL...                                                                                                    [endspacerx-7f]: Checking CLTE...                                                                                                    [endspacerx-7f]: OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [endspacexn-7f]: Checking TECL...                                                                                                    [endspacexn-7f]: Checking CLTE...                                                                                                    [endspacexn-7f]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-a0]  : Checking TECL...                                                                                                    [midspace-a0]  : Checking CLTE...                                                                                                    [midspace-a0]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-a0] : Checking TECL...                                                                                                    [postspace-a0] : Checking CLTE...                                                                                                    [postspace-a0] : OK (TECL: 0.47 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [prespace-a0]  : Checking TECL...                                                                                                    [prespace-a0]  : Checking CLTE...                                                                                                    [prespace-a0]  : OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [endspace-a0]  : Checking TECL...                                                                                                    [endspace-a0]  : Checking CLTE...                                                                                                    [endspace-a0]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-a0] : Checking TECL...                                                                                                    [xprespace-a0] : Checking CLTE...                                                                                                    [xprespace-a0] : OK (TECL: 0.46 - 301) (CLTE: 0.46 - 301)
+                                                                                                    [endspacex-a0] : Checking TECL...                                                                                                    [endspacex-a0] : Checking CLTE...                                                                                                    [endspacex-a0] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-a0]: Checking TECL...                                                                                                    [rxprespace-a0]: Checking CLTE...                                                                                                    [rxprespace-a0]: OK (TECL: 0.46 - 400) (CLTE: 0.48 - 400)
+                                                                                                    [xnprespace-a0]: Checking TECL...                                                                                                    [xnprespace-a0]: Checking CLTE...                                                                                                    [xnprespace-a0]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-a0]: Checking TECL...                                                                                                    [endspacerx-a0]: Checking CLTE...                                                                                                    [endspacerx-a0]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacexn-a0]: Checking TECL...                                                                                                    [endspacexn-a0]: Checking CLTE...                                                                                                    [endspacexn-a0]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [midspace-ff]  : Checking TECL...                                                                                                    [midspace-ff]  : Checking CLTE...                                                                                                    [midspace-ff]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [postspace-ff] : Checking TECL...                                                                                                    [postspace-ff] : Checking CLTE...                                                                                                    [postspace-ff] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [prespace-ff]  : Checking TECL...                                                                                                    [prespace-ff]  : Checking CLTE...                                                                                                    [prespace-ff]  : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspace-ff]  : Checking TECL...                                                                                                    [endspace-ff]  : Checking CLTE...                                                                                                    [endspace-ff]  : OK (TECL: 0.48 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xprespace-ff] : Checking TECL...                                                                                                    [xprespace-ff] : Checking CLTE...                                                                                                    [xprespace-ff] : OK (TECL: 0.46 - 301) (CLTE: 0.47 - 301)
+                                                                                                    [endspacex-ff] : Checking TECL...                                                                                                    [endspacex-ff] : Checking CLTE...                                                                                                    [endspacex-ff] : OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [rxprespace-ff]: Checking TECL...                                                                                                    [rxprespace-ff]: Checking CLTE...                                                                                                    [rxprespace-ff]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [xnprespace-ff]: Checking TECL...                                                                                                    [xnprespace-ff]: Checking CLTE...                                                                                                    [xnprespace-ff]: OK (TECL: 0.46 - 400) (CLTE: 0.46 - 400)
+                                                                                                    [endspacerx-ff]: Checking TECL...                                                                                                    [endspacerx-ff]: Checking CLTE...                                                                                                    [endspacerx-ff]: OK (TECL: 0.46 - 400) (CLTE: 0.47 - 400)
+                                                                                                    [endspacexn-ff]: Checking TECL...                                                                                                    [endspacexn-ff]: Checking CLTE...                                                                                                    [endspacexn-ff]: OK (TECL: 0.47 - 400) (CLTE: 0.46 - 400)
+[92m====================================================================================[0m•x[92m[2022-06-04](01:13)[0mx•
+[91m RUNNING NUCLEI SCAN [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:13)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:13)[0mx•
+[91m RUNNING SC0PE WEB VULNERABILITY SCAN [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:13)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[91m RUNNING SC0PE NETWORK VULNERABILITY SCAN [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+P4 - LOW, SSH Version Disclosure, 10.10.11.140, [+] 10.10.11.140:22       - SSH server version: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2 ( service.version=7.9p1 openssh.comment=Debian-10+deb10u2 service.vendor=OpenBSD service.family=OpenSSH service.product=OpenSSH service.cpe23=cpe:/a:openbsd:openssh:7.9p1 os.vendor=Debian os.family=Linux os.product=Linux os.version=10.2 os.cpe23=cpe:/o:debian:debian_linux:10.2 service.protocol=ssh fingerprint_db=ssh.banner )
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/UBUNTU-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/SUSE-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/SUSE-CVE-2019-25017/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-25017/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/IBM-AIX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/DEBIAN-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EXPLOITPACK:98FE96309F9524B8C84C508837551A19 5.8 https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97 5.8 https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EDB-ID:46516 5.8 https://vulners.com/exploitdb/EDB-ID:46516
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EDB-ID:46193 5.8 https://vulners.com/exploitdb/EDB-ID:46193
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6111 5.8 https://vulners.com/cve/CVE-2019-6111
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, 1337DAY-ID-32328 5.8 https://vulners.com/zdt/1337DAY-ID-32328
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, 1337DAY-ID-32009 5.8 https://vulners.com/zdt/1337DAY-ID-32009
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2021-41617 4.4 https://vulners.com/cve/CVE-2021-41617
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-16905 4.4 https://vulners.com/cve/CVE-2019-16905
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2020-14145 4.3 https://vulners.com/cve/CVE-2020-14145
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6110 4.0 https://vulners.com/cve/CVE-2019-6110
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6109 4.0 https://vulners.com/cve/CVE-2019-6109
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2018-20685 2.6 https://vulners.com/cve/CVE-2018-20685
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, PACKETSTORM:151227 0.0 https://vulners.com/packetstorm/PACKETSTORM:151227
+P5 - INFO, Interesting Ports Found, 10.10.11.140, 22  
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+====================================================================================
+•?((¯°·..• Sc0pe Vulnerability Report by @xer0dayz •._.·°¯))؟• 
+====================================================================================
+Critical: 0
+High: 0
+Medium: 38
+Low: 1
+Info: 0
+Score: 116
+====================================================================================
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/UBUNTU-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/SUSE-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/SUSE-CVE-2019-25017/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-25017/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/IBM-AIX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/DEBIAN-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EXPLOITPACK:98FE96309F9524B8C84C508837551A19 5.8 https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97 5.8 https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EDB-ID:46516 5.8 https://vulners.com/exploitdb/EDB-ID:46516
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EDB-ID:46193 5.8 https://vulners.com/exploitdb/EDB-ID:46193
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6111 5.8 https://vulners.com/cve/CVE-2019-6111
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, 1337DAY-ID-32328 5.8 https://vulners.com/zdt/1337DAY-ID-32328
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, 1337DAY-ID-32009 5.8 https://vulners.com/zdt/1337DAY-ID-32009
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2021-41617 4.4 https://vulners.com/cve/CVE-2021-41617
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-16905 4.4 https://vulners.com/cve/CVE-2019-16905
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2020-14145 4.3 https://vulners.com/cve/CVE-2020-14145
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6110 4.0 https://vulners.com/cve/CVE-2019-6110
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6109 4.0 https://vulners.com/cve/CVE-2019-6109
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2018-20685 2.6 https://vulners.com/cve/CVE-2018-20685
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, PACKETSTORM:151227 0.0 https://vulners.com/packetstorm/PACKETSTORM:151227
+P4 - LOW, SSH Version Disclosure, 10.10.11.140, [+] 10.10.11.140:22       - SSH server version: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2 ( service.version=7.9p1 openssh.comment=Debian-10+deb10u2 service.vendor=OpenBSD service.family=OpenSSH service.product=OpenSSH service.cpe23=cpe:/a:openbsd:openssh:7.9p1 os.vendor=Debian os.family=Linux os.product=Linux os.version=10.2 os.cpe23=cpe:/o:debian:debian_linux:10.2 service.protocol=ssh fingerprint_db=ssh.banner )
+====================================================================================
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[91m SCAN COMPLETE! [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[91m                ____               [0m
+[91m    _________  /  _/___  ___  _____[0m
+[91m   / ___/ __ \ / // __ \/ _ \/ ___/[0m
+[91m  (__  ) / / // // /_/ /  __/ /    [0m
+[91m /____/_/ /_/___/ .___/\___/_/     [0m
+[91m               /_/                 [0m
+
+[94m[*][0m Opening loot directory /usr/share/sniper/loot/workspace/10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+[93m + -- --=[ Generating reports...[0m
+[92m[[94m|[92m][0m
+[93m + -- --=[ Sorting all files...[0m
+[93m + -- --=[ Removing blank screenshots and files...[0m
+[91m + -- --=[ Sn1per Professional is not installed. To download Sn1per Professional, go to https://sn1persecurity.com. [0m
+[93m + -- --=[ Done![0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[91m SCANNING ALL HTTPS PORTS [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[91m RUNNING SC0PE NETWORK VULNERABILITY SCAN [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+P4 - LOW, SSH Version Disclosure, 10.10.11.140, [+] 10.10.11.140:22       - SSH server version: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2 ( service.version=7.9p1 openssh.comment=Debian-10+deb10u2 service.vendor=OpenBSD service.family=OpenSSH service.product=OpenSSH service.cpe23=cpe:/a:openbsd:openssh:7.9p1 os.vendor=Debian os.family=Linux os.product=Linux os.version=10.2 os.cpe23=cpe:/o:debian:debian_linux:10.2 service.protocol=ssh fingerprint_db=ssh.banner )
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/UBUNTU-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/SUSE-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/SUSE-CVE-2019-25017/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-25017/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/IBM-AIX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/DEBIAN-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EXPLOITPACK:98FE96309F9524B8C84C508837551A19 5.8 https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97 5.8 https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EDB-ID:46516 5.8 https://vulners.com/exploitdb/EDB-ID:46516
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EDB-ID:46193 5.8 https://vulners.com/exploitdb/EDB-ID:46193
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6111 5.8 https://vulners.com/cve/CVE-2019-6111
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, 1337DAY-ID-32328 5.8 https://vulners.com/zdt/1337DAY-ID-32328
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, 1337DAY-ID-32009 5.8 https://vulners.com/zdt/1337DAY-ID-32009
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2021-41617 4.4 https://vulners.com/cve/CVE-2021-41617
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-16905 4.4 https://vulners.com/cve/CVE-2019-16905
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2020-14145 4.3 https://vulners.com/cve/CVE-2020-14145
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6110 4.0 https://vulners.com/cve/CVE-2019-6110
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6109 4.0 https://vulners.com/cve/CVE-2019-6109
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2018-20685 2.6 https://vulners.com/cve/CVE-2018-20685
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, PACKETSTORM:151227 0.0 https://vulners.com/packetstorm/PACKETSTORM:151227
+P5 - INFO, Interesting Ports Found, 10.10.11.140, 22  
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+[91m PERFORMING TCP PORT SCAN [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:14)[0mx•
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-04 01:14 UTC
+Nmap scan report for 10.10.11.140
+Host is up (0.23s latency).
+Not shown: 65547 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 85.26 seconds
+[93m + -- --=[ AUTO_BRUTE setting disabled in sniper.conf... skipping.[0m
+====================================================================================
+•?((¯°·..• Sc0pe Vulnerability Report by @xer0dayz •._.·°¯))؟• 
+====================================================================================
+Critical: 0
+High: 0
+Medium: 38
+Low: 1
+Info: 0
+Score: 116
+====================================================================================
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/UBUNTU-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/SUSE-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/SUSE-CVE-2019-25017/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-25017/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/IBM-AIX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/DEBIAN-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/ 5.8 https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EXPLOITPACK:98FE96309F9524B8C84C508837551A19 5.8 https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97 5.8 https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EDB-ID:46516 5.8 https://vulners.com/exploitdb/EDB-ID:46516
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, EDB-ID:46193 5.8 https://vulners.com/exploitdb/EDB-ID:46193
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6111 5.8 https://vulners.com/cve/CVE-2019-6111
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, 1337DAY-ID-32328 5.8 https://vulners.com/zdt/1337DAY-ID-32328
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, 1337DAY-ID-32009 5.8 https://vulners.com/zdt/1337DAY-ID-32009
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2021-41617 4.4 https://vulners.com/cve/CVE-2021-41617
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-16905 4.4 https://vulners.com/cve/CVE-2019-16905
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/ 4.3 https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2020-14145 4.3 https://vulners.com/cve/CVE-2020-14145
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6110 4.0 https://vulners.com/cve/CVE-2019-6110
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2019-6109 4.0 https://vulners.com/cve/CVE-2019-6109
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, CVE-2018-20685 2.6 https://vulners.com/cve/CVE-2018-20685
+P3 - MEDIUM, Components with Known Vulnerabilities - NMap, 10.10.11.140, PACKETSTORM:151227 0.0 https://vulners.com/packetstorm/PACKETSTORM:151227
+P4 - LOW, SSH Version Disclosure, 10.10.11.140, [+] 10.10.11.140:22       - SSH server version: SSH-2.0-OpenSSH_7.9p1 Debian-10+deb10u2 ( service.version=7.9p1 openssh.comment=Debian-10+deb10u2 service.vendor=OpenBSD service.family=OpenSSH service.product=OpenSSH service.cpe23=cpe:/a:openbsd:openssh:7.9p1 os.vendor=Debian os.family=Linux os.product=Linux os.version=10.2 os.cpe23=cpe:/o:debian:debian_linux:10.2 service.protocol=ssh fingerprint_db=ssh.banner )
+====================================================================================
+[92m====================================================================================[0m•x[92m[2022-06-04](01:16)[0mx•
+[91m SCAN COMPLETE! [0m
+[92m====================================================================================[0m•x[92m[2022-06-04](01:16)[0mx•
+[91m                ____               [0m
+[91m    _________  /  _/___  ___  _____[0m
+[91m   / ___/ __ \ / // __ \/ _ \/ ___/[0m
+[91m  (__  ) / / // // /_/ /  __/ /    [0m
+[91m /____/_/ /_/___/ .___/\___/_/     [0m
+[91m               /_/                 [0m
+
+[94m[*][0m Opening loot directory /usr/share/sniper/loot/workspace/10.10.11.140 [94m[[0m[92mOK[0m[94m][0m
+[93m + -- --=[ Generating reports...[0m
+[92m[[94m|[92m][0m
+[93m + -- --=[ Sorting all files...[0m
+[93m + -- --=[ Removing blank screenshots and files...[0m
+[91m + -- --=[ Sn1per Professional is not installed. To download Sn1per Professional, go to https://sn1persecurity.com. [0m
+[93m + -- --=[ Done![0m
