@@ -1,0 +1,56 @@
+# Nmap 7.80 scan initiated Sat Jun  4 15:20:27 2022 as: nmap -sV -vv --script=http-default-accounts.nse -oN nmap_defaccount.txt 172.28.128.3
+Nmap scan report for 172.28.128.3
+Host is up, received reset ttl 255 (0.0034s latency).
+Scanned at 2022-06-04 15:20:29 +10 for 12s
+Not shown: 993 filtered ports
+Reason: 993 no-responses
+PORT     STATE SERVICE     REASON         VERSION
+21/tcp   open  ftp         syn-ack ttl 64 ProFTPD 1.3.5
+22/tcp   open  ssh         syn-ack ttl 64 OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http        syn-ack ttl 64 Apache httpd 2.4.7
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+445/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+631/tcp  open  ipp         syn-ack ttl 64 CUPS 1.7
+|_http-server-header: CUPS/1.7 IPP/2.1
+3306/tcp open  mysql?      syn-ack ttl 64
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, NULL, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|_    Host '172.28.128.1' is not allowed to connect to this MySQL server
+8080/tcp open  http        syn-ack ttl 64 Jetty 8.1.7.v20120910
+|_http-server-header: Jetty(8.1.7.v20120910)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.80%I=7%D=6/4%Time=629AEBA3%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,48,"\0\0\0\xffj\x04Host\x20'172\.28\.128\.1'\x20is\x20not\x20allowed\
+SF:x20to\x20connect\x20to\x20this\x20MySQL\x20server")%r(GenericLines,48,"
+SF:\0\0\0\xffj\x04Host\x20'172\.28\.128\.1'\x20is\x20not\x20allowed\x20to\
+SF:x20connect\x20to\x20this\x20MySQL\x20server")%r(GetRequest,48,"\0\0\0\x
+SF:ffj\x04Host\x20'172\.28\.128\.1'\x20is\x20not\x20allowed\x20to\x20conne
+SF:ct\x20to\x20this\x20MySQL\x20server")%r(HTTPOptions,48,"\0\0\0\xffj\x04
+SF:Host\x20'172\.28\.128\.1'\x20is\x20not\x20allowed\x20to\x20connect\x20t
+SF:o\x20this\x20MySQL\x20server")%r(RTSPRequest,48,"\0\0\0\xffj\x04Host\x2
+SF:0'172\.28\.128\.1'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20th
+SF:is\x20MySQL\x20server")%r(RPCCheck,48,"\0\0\0\xffj\x04Host\x20'172\.28\
+SF:.128\.1'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MySQ
+SF:L\x20server")%r(DNSVersionBindReqTCP,48,"\0\0\0\xffj\x04Host\x20'172\.2
+SF:8\.128\.1'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20My
+SF:SQL\x20server")%r(DNSStatusRequestTCP,48,"\0\0\0\xffj\x04Host\x20'172\.
+SF:28\.128\.1'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20M
+SF:ySQL\x20server")%r(Help,48,"\0\0\0\xffj\x04Host\x20'172\.28\.128\.1'\x2
+SF:0is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MySQL\x20server
+SF:")%r(SSLSessionReq,48,"\0\0\0\xffj\x04Host\x20'172\.28\.128\.1'\x20is\x
+SF:20not\x20allowed\x20to\x20connect\x20to\x20this\x20MySQL\x20server")%r(
+SF:TerminalServerCookie,48,"\0\0\0\xffj\x04Host\x20'172\.28\.128\.1'\x20is
+SF:\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MySQL\x20server")%
+SF:r(TLSSessionReq,48,"\0\0\0\xffj\x04Host\x20'172\.28\.128\.1'\x20is\x20n
+SF:ot\x20allowed\x20to\x20connect\x20to\x20this\x20MySQL\x20server")%r(Ker
+SF:beros,48,"\0\0\0\xffj\x04Host\x20'172\.28\.128\.1'\x20is\x20not\x20allo
+SF:wed\x20to\x20connect\x20to\x20this\x20MySQL\x20server")%r(SMBProgNeg,48
+SF:,"\0\0\0\xffj\x04Host\x20'172\.28\.128\.1'\x20is\x20not\x20allowed\x20t
+SF:o\x20connect\x20to\x20this\x20MySQL\x20server")%r(X11Probe,48,"\0\0\0\x
+SF:ffj\x04Host\x20'172\.28\.128\.1'\x20is\x20not\x20allowed\x20to\x20conne
+SF:ct\x20to\x20this\x20MySQL\x20server");
+Service Info: Hosts: 127.0.2.1, METASPLOITABLE3-UB1404; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jun  4 15:20:41 2022 -- 1 IP address (1 host up) scanned in 14.75 seconds

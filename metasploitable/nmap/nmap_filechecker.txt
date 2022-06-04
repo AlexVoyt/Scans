@@ -1,0 +1,12 @@
+# Nmap 7.80 scan initiated Sat Jun  4 15:31:59 2022 as: nmap -sS -Pn -p 80 --open -oN nmap_filechecker.txt --script=file-checker.nse --script-args index=/etc/passwd,read=true 172.28.128.3
+Nmap scan report for 172.28.128.3
+Host is up (0.0014s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+| file-checker: 
+|   index: /etc/passwd
+|   STATUS: 404 NOT FOUND
+|_    module author: r00t-3xp10it
+
+# Nmap done at Sat Jun  4 15:32:01 2022 -- 1 IP address (1 host up) scanned in 2.45 seconds
