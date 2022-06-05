@@ -1,0 +1,43 @@
+# Nmap 7.80 scan initiated Mon Jun  6 01:13:53 2022 as: nmap -sS -sV -O -sC -vv -oN nmap_1.txt 192.168.56.102
+Nmap scan report for 192.168.56.102
+Host is up, received arp-response (0.00052s latency).
+Scanned at 2022-06-06 01:13:54 +10 for 21s
+Not shown: 998 closed ports
+Reason: 998 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 0f:57:0d:60:31:4a:fd:2b:db:3e:9e:2f:63:2e:35:df (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPPINRnH/QsHt4FX1cTwjqsD2js7ClGUISN3wQCUwYYKx9NLyhpnRJP26IYF1rKuGegrFo+C1728MJ9n/iV1An+Z7LtmWLNy18zWP0DnP0DvZKIT5I3pNgwB82LRZ8xISMpYqbqUJ+BG+OJ+eAbIoNn0MV6hP0Qgge0LLUABUr7+p3GNkSMdiXfQsKWxevI/7qjmYNJZknFAD3ZUHQyRo7mImYolcpdqsuWa77bIqJumx4yXMcdMLcXe3J5bUHf1gV5GJOCIOeJMR0CrvPkMhotXdErtLLMtMSdKtE97iI1tQCPURlFlXFXeO5HeqSxW0+Zio35JVn5H0a56KPnJGb
+|   256 00:9a:c8:d3:ba:1b:47:b2:48:a8:88:24:9f:fe:33:cc (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJy8T19N0w40iDM5IcGGijefqnT+sxOyAb74lOphB8AU4VgilovYe4eYVuevEyhNU8lNk6mkqr3aBWueycyuGVY=
+|   256 6d:af:db:21:25:ee:b0:a6:7d:05:f3:06:f0:65:ff:dc (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEN7aAWve8SO3S79Je/Jl1hI2PCIHMkUoW7UL0jJjNIM
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.38 ((Debian))
+| http-methods: 
+|_  Supported Methods: POST OPTIONS HEAD GET
+|_http-server-header: Apache/2.4.38 (Debian)
+|_http-title: Apache2 Debian Default Page: It works
+MAC Address: 08:00:27:E4:52:EF (Oracle VirtualBox virtual NIC)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=6/6%OT=22%CT=1%CU=31055%PV=Y%DS=1%DC=D%G=Y%M=080027%TM
+OS:=629CC847%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=104%TI=Z%CI=Z%II=I%
+OS:TS=A)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5
+OS:=M5B4ST11NW7%O6=M5B4ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=
+OS:FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%
+OS:A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0
+OS:%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S
+OS:=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R
+OS:=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N
+OS:%T=40%CD=S)
+
+Uptime guess: 32.577 days (since Wed May  4 11:22:58 2022)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jun  6 01:14:15 2022 -- 1 IP address (1 host up) scanned in 23.37 seconds

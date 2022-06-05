@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Mon Jun  6 01:17:41 2022 as: nmap -sS -Pn -p 80 --open -oN nmap_filechecker.txt --script=file-checker.nse --script-args index=/etc/passwd,read=true 192.168.56.102
+Nmap scan report for 192.168.56.102
+Host is up (0.00050s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+| file-checker: 
+|   index: /etc/passwd
+|   STATUS: 404 NOT FOUND
+|_    module author: r00t-3xp10it
+MAC Address: 08:00:27:E4:52:EF (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Mon Jun  6 01:17:42 2022 -- 1 IP address (1 host up) scanned in 1.66 seconds

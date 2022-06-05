@@ -1,0 +1,9 @@
+# Nmap 7.80 scan initiated Mon Jun  6 01:22:24 2022 as: nmap -p80 --script=http-default-accounts.nse -oN nmap_defaccount.txt 192.168.56.102
+Nmap scan report for 192.168.56.102
+Host is up (0.00043s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 08:00:27:E4:52:EF (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Mon Jun  6 01:22:26 2022 -- 1 IP address (1 host up) scanned in 1.76 seconds

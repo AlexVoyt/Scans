@@ -1,0 +1,11 @@
+# Nmap 7.80 scan initiated Mon Jun  6 01:33:26 2022 as: nmap -p 22 --script ssh-brute --script-args userdb=user.txt,passdb=pass.txt --script-args ssh-brute.timeout=4s -oN nmap_sshbrute.txt 192.168.56.102
+Nmap scan report for 192.168.56.102
+Host is up (0.00059s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+| ssh-brute: 
+|   Accounts: No valid accounts found
+|_  Statistics: Performed 1616 guesses in 603 seconds, average tps: 2.7
+
+# Nmap done at Mon Jun  6 01:43:31 2022 -- 1 IP address (1 host up) scanned in 604.65 seconds
